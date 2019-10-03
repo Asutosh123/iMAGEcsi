@@ -1,0 +1,99 @@
+Feature: To Verify Case Complete flow from Creation to Completion
+
+  @smoke @createCase
+  Scenario Outline: : Verify Io lead should be able to create a Case                                    # features/Verify_IO_Lead_Create_Case_Functonlity.feature:8
+    When IO Lead enters "<username>" and "<password>" in login page
+    And User click on Login button
+    Then Verify Dashboard page is display
+    When Click on New Case in Dashboard page
+    Then Verify the Create New Case page is display
+    When IO lead entres all case details to create New Case
+    When Click on Save Button
+    Then Verify case created success message
+    Then Verify case status should be in "<draft>"
+    When User clicks on Logout button
+    When IO Lead enters "<username>" and "<password>" in login page
+    And User clicks on View Details link in card layout in dashboard for the created case
+    Then Verify user should be navigate to the case details page of particular case
+    When User clicks on Submit button
+    Then Verify error message for registering a case it must have minimum 4 fish eye image is mandatory
+    When Upload fisheye images
+    Then Click on Submit button
+    Then Verify Evidence Images or Sketches are not uploaded alert message
+    When User click on Proceed Button in pop up
+    When Click on Back button
+    Then Verify case status should be in "<Registered>"
+    When User clicks on View Details link in card layout in dashboard for the created case
+    When User selects Reporting lead from the dropdown "<reportingLead>"
+    And User clicks on Assign Button
+    Then Verify the Case is Assigned To "<reportingLead>" Reporting Lead
+    When User clicks on Logout button
+
+    Examples: 
+
+  Background:                                                # features/Verify_IO_Lead_Create_Case_Functonlity.feature:3
+    Given User navigates to iMAGENEcsi SIT portal login page # Login.user_navigates_to_the_SIT_page()
+    Then Verify the title of the imagenecsi application      # Login.verify_the_title_of_the_imagenecsi_application()
+
+  @smoke @createCase
+  Scenario Outline: : Verify Io lead should be able to create a Case                                    # features/Verify_IO_Lead_Create_Case_Functonlity.feature:39
+    When IO Lead enters "email462@mailinator.com" and "Test@123" in login page                          # Login.io_lead_enters_and_to_login_page(String,String)
+    And User click on Login button                                                                      # Login.user_clicks_on_Login_button()
+    Then Verify Dashboard page is display                                                               # Dashboard.verifyDashboardPageIsDisplay()
+    When Click on New Case in Dashboard page                                                            # Dashboard.clickNewCaseButton()
+    Then Verify the Create New Case page is display                                                     # CreateNewCase.verify_the_Create_New_Case_page_is_displayed()
+    When IO lead entres all case details to create New Case                                             # CreateNewCase.ioLeadCaseDetails()
+      org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div/label[text()='Date *']/parent::div//div/input"}
+        (Session info: chrome=72.0.3626.109)
+        (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 0 milliseconds
+      For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+      Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+      System info: host: 'BT-INDIA-COM9', ip: '172.25.10.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\Users\Mohit\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:65088}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.109, webStorageEnabled: true}
+      Session ID: 1e4d2afd8e12cf92269683c5acadcc4e
+      *** Element info: {Using=xpath, value=//div/label[text()='Date *']/parent::div//div/input}
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+      	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+      	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+      	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+      	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+      	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+      	at PageObjects.BrowserBot.getElement(BrowserBot.java:97)
+      	at PageObjects.BrowserBot.getAttributeValue(BrowserBot.java:119)
+      	at PageObjects.CreateNewCasePage.verifyCurrentDate(CreateNewCasePage.java:56)
+      	at PageObjects.CreateNewCasePage.enterIOLeadCaseDetails(CreateNewCasePage.java:105)
+      	at step_definitions.CreateNewCase.ioLeadCaseDetails(CreateNewCase.java:35)
+      	at ✽.When IO lead entres all case details to create New Case(features/Verify_IO_Lead_Create_Case_Functonlity.feature:14)
+
+    When Click on Save Button                                                                           # CreateNewCase.user_clicks_on_Save_Button()
+    Then Verify case created success message                                                            # CreateNewCase.verify_case_created_success_Message()
+    Then Verify case status should be in "Draft"                                                        # Dashboard.verifyStatus(String)
+    When User clicks on Logout button                                                                   # Login.User_clicks_on_logout_button()
+    When IO Lead enters "email462@mailinator.com" and "Test@123" in login page                          # Login.io_lead_enters_and_to_login_page(String,String)
+    And User clicks on View Details link in card layout in dashboard for the created case               # Dashboard.clickOnViewDetailsButton()
+    Then Verify user should be navigate to the case details page of particular case                     # CaseDetails.verifyCaseDetails()
+    When User clicks on Submit button                                                                   # CaseDetails.clickOnSubmitButton()
+    Then Verify error message for registering a case it must have minimum 4 fish eye image is mandatory # CaseDetails.verifyFourFishEyeImagesMandatoryErrorMsg()
+    When Upload fisheye images                                                                          # CaseDetails.uploadFishEyeImages()
+    Then Click on Submit button                                                                         # CaseDetails.clickOnploadButton()
+    Then Verify Evidence Images or Sketches are not uploaded alert message                              # CaseDetails.verifyAlertMessage()
+    When User click on Proceed Button in pop up                                                         # CaseDetails.clickOnProcessedButton()
+    When Click on Back button                                                                           # CaseDetails.selectBackButton()
+    Then Verify case status should be in "Registered"                                                   # Dashboard.verifyStatus(String)
+    When User clicks on View Details link in card layout in dashboard for the created case              # Dashboard.clickOnViewDetailsButton()
+    When User selects Reporting lead from the dropdown "Srini Reporting Lead"                           # CaseDetails.selectReportingLead(String)
+    And User clicks on Assign Button                                                                    # CaseDetails.selectAssign()
+    Then Verify the Case is Assigned To "Srini Reporting Lead" Reporting Lead                           # CaseDetails.verifyAssignedReportingLead(String)
+    When User clicks on Logout button                                                                   # Login.User_clicks_on_logout_button()

@@ -1,0 +1,128 @@
+[
+  {
+    "source": "^Verify the title of the imagenecsi application$",
+    "steps": [
+      {
+        "name": "Verify the title of the imagenecsi application",
+        "aggregatedDurations": {
+          "average": 0.000010809,
+          "median": 0.000010809
+        },
+        "durations": [
+          {
+            "duration": 0.000010809,
+            "location": "features/Verify_IO_Lead_Create_Case_Functonlity.feature:5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Click on New Case in Dashboard page$",
+    "steps": [
+      {
+        "name": "Click on New Case in Dashboard page",
+        "aggregatedDurations": {
+          "average": 0.22264557,
+          "median": 0.22264557
+        },
+        "durations": [
+          {
+            "duration": 0.22264557,
+            "location": "features/Verify_IO_Lead_Create_Case_Functonlity.feature:12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Verify the Create New Case page is display$",
+    "steps": [
+      {
+        "name": "Verify the Create New Case page is display",
+        "aggregatedDurations": {
+          "average": 0.110088155,
+          "median": 0.110088155
+        },
+        "durations": [
+          {
+            "duration": 0.110088155,
+            "location": "features/Verify_IO_Lead_Create_Case_Functonlity.feature:13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^IO Lead enters \"(.*?)\" and \"(.*?)\" in login page$",
+    "steps": [
+      {
+        "name": "IO Lead enters \"email462@mailinator.com\" and \"Test@123\" in login page",
+        "aggregatedDurations": {
+          "average": 0.397762505,
+          "median": 0.397762505
+        },
+        "durations": [
+          {
+            "duration": 0.397762505,
+            "location": "features/Verify_IO_Lead_Create_Case_Functonlity.feature:9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Verify Dashboard page is display$",
+    "steps": [
+      {
+        "name": "Verify Dashboard page is display",
+        "aggregatedDurations": {
+          "average": 1.571090001,
+          "median": 1.571090001
+        },
+        "durations": [
+          {
+            "duration": 1.571090001,
+            "location": "features/Verify_IO_Lead_Create_Case_Functonlity.feature:11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User navigates to iMAGENEcsi SIT portal login page$",
+    "steps": [
+      {
+        "name": "User navigates to iMAGENEcsi SIT portal login page",
+        "aggregatedDurations": {
+          "average": 3.329301906,
+          "median": 3.329301906
+        },
+        "durations": [
+          {
+            "duration": 3.329301906,
+            "location": "features/Verify_IO_Lead_Create_Case_Functonlity.feature:4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User click on Login button$",
+    "steps": [
+      {
+        "name": "User click on Login button",
+        "aggregatedDurations": {
+          "average": 0.114237627,
+          "median": 0.114237627
+        },
+        "durations": [
+          {
+            "duration": 0.114237627,
+            "location": "features/Verify_IO_Lead_Create_Case_Functonlity.feature:10"
+          }
+        ]
+      }
+    ]
+  }
+]

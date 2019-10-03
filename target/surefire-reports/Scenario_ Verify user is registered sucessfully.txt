@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: Scenario: Verify user is registered sucessfully
+-------------------------------------------------------------------------------
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.606 sec - in Scenario: Verify user is registered sucessfully
